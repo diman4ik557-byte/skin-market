@@ -31,8 +31,8 @@ public class Studio {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "created_at")
-    private LocalDate createdAt;
+    @Column(name = "founded_at")
+    private LocalDate foundedAt;
 
     @ManyToOne
     @JoinColumn(name = "manager_id")
