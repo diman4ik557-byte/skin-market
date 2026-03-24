@@ -1,13 +1,14 @@
 package by.step.service;
 
 import by.step.dto.StudioMemberDto;
+import by.step.entity.enums.StudioRole;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface StudioMemberService {
 
-    StudioMemberDto addMember(Long studioId, Long artistId, String role);
+    StudioMemberDto addMember(Long studioId, Long artistId, StudioRole role);
 
     Optional<StudioMemberDto> findByStudioAndArtist(Long studioId, Long artistId);
 
@@ -17,7 +18,7 @@ public interface StudioMemberService {
 
     List<StudioMemberDto> findByStudioAndRole(Long studioId, String role);
 
-    void updateRole(Long memberId, String role);
+    void updateRole(Long memberId, StudioRole role);
 
     void removeMember(Long studioId, Long artistId);
 
