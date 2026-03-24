@@ -25,4 +25,19 @@ public class ArtistProfileDto {
     private Integer averageTime;
     private Boolean isAvailable;
     private List<String> socialLinks;
+
+    public static ArtistProfileDto of(Long id, Long profileId, String username, String studioName,
+                                      String styles, BigDecimal minPrice,
+                                      Integer averageTime, Boolean isAvailable) {
+        return ArtistProfileDto.builder()
+                .id(id)
+                .profileId(profileId)
+                .username(username)
+                .studioName(studioName)
+                .styles(styles)
+                .minPrice(minPrice)
+                .averageTime(averageTime)
+                .isAvailable(isAvailable)
+                .build();
+    }
 }

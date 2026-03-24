@@ -21,4 +21,16 @@ public class UserDto {
         private UserRole role;
         private BigDecimal balance;
         private LocalDateTime registeredAt;
+
+    public static UserDto of(Long id, String username, String email,
+                             UserRole role, BigDecimal balance, LocalDateTime registeredAt) {
+        return UserDto.builder()
+                .id(id)
+                .username(username)
+                .email(email)
+                .role(role)
+                .balance(balance)
+                .registeredAt(registeredAt)
+                .build();
+    }
 }

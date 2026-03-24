@@ -27,11 +27,22 @@ public class OrderDto {
     private LocalDateTime createdAt;
     private LocalDateTime completedAt;
 
-    public static OrderDto of(Long id, String customerName,
-                              String artistName, OrderStatus status,
-                              String description,BigDecimal price, String finalFileUrl,
-                              LocalDateTime createdAt, LocalDateTime completedAt){
-        return new OrderDto(id,null,customerName,null,artistName,status,description,
-                price,finalFileUrl,createdAt,completedAt);
+    public static OrderDto of(Long id, Long customerId, String customerName,
+                              Long artistId, String artistName,
+                              OrderStatus status, String description, BigDecimal price,
+                              String finalFileUrl, LocalDateTime createdAt, LocalDateTime completedAt) {
+        return OrderDto.builder()
+                .id(id)
+                .customerId(customerId)
+                .customerName(customerName)
+                .artistId(artistId)
+                .artistName(artistName)
+                .status(status)
+                .description(description)
+                .price(price)
+                .finalFileUrl(finalFileUrl)
+                .createdAt(createdAt)
+                .completedAt(completedAt)
+                .build();
     }
 }
