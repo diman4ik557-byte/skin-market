@@ -28,10 +28,10 @@
     </properties>
 
     <modules>
-        <module>data-servise</module>
+        <module>data-service</module>
         <module>business-service</module>
         <module>web-service</module>
-        <module>data-servise</module>
+        <module>data-service</module>
     </modules>
 
     <dependencyManagement>
